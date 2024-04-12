@@ -19,10 +19,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="APPLE.h" />
+    <ClCompile Include="Code\AppMain.cpp" />
+    <ClCompile Include="Code\Enemy.cpp" />
+    <ClCompile Include="Code\GameMainScene.cpp" />
+    <ClCompile Include="Code\Player.cpp" />
+    <ClCompile Include="Code\ResultScene.cpp" />
+    <ClCompile Include="Code\SceneManager.cpp" />
+    <ClCompile Include="Code\Title.cpp" />
+    <ClCompile Include="Utility\InputControl.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="driveandavoid00ソース.cpp" />
+    <ClInclude Include="Code\Enemy.h" />
+    <ClInclude Include="Code\GameMainScene.h" />
+    <ClInclude Include="Code\Player.h" />
+    <ClInclude Include="Code\ResultScene.h" />
+    <ClInclude Include="Code\SceneBase.h" />
+    <ClInclude Include="Code\SceneManager.h" />
+    <ClInclude Include="Code\Title.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

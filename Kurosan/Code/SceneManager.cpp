@@ -1,14 +1,11 @@
 #include "SceneManager.h"
-#include"../Utility/InputControl.h"
-#include"DxLib.h"
-#include"Title.h"
-#include"GameMainScene.h"
-#include"ResultScene.h"
-#include"RuleScene.h"
-#include"RankingDispScene.h"
-#include"RankingInputScene.h"
+#include "../Utility/InputControl.h"
+#include "DxLib.h"
+#include "Title.h"
+#include "GameMainScene.h"
+#include "ResultScene.h"
 
-SceneManager::SceneManager() :current_scene(nullptr), credit_image(NULL)
+SceneManager::SceneManager()
 {
 
 }
@@ -21,7 +18,6 @@ SceneManager::~SceneManager()
 //シーンマネージャー機能：初期化処理
 void SceneManager::Initialize()
 {
-	credit_image = LoadGraph("Resource/images/End.bmp");
 	//ウィンドウのタイトルを設定
 	SetMainWindowText("Drive&Avoid");
 
@@ -161,12 +157,6 @@ SceneBase* SceneManager::CreateScene(eSceneType scene_type)
 		return new GameMainScene;
 	case eSceneType::E_RESULT:
 		return new ResultScene;
-	case eSceneType::E_RULE:
-		return new RuleScene;
-	case eSceneType::E_RANKING_DISP:
-		return new RankingDispScene;
-	case eSceneType::E_RANKING_INPUT:
-		return new RankingInputScene;
 	default:
 		return nullptr;
 	}

@@ -1,33 +1,13 @@
 #pragma once
 
 #include"../Utility/Vector2D.h"
-#include"Barrier.h"
 
 class Player
 {
 private:
-	bool is_active;			//有効状態か?
 	int image;				//描画する画像データ
 	Vector2D location;		//位置座標
 	Vector2D box_size;		//当たり判定の大きさ
-	float angle;			//角度
-	float speed;			//速さ
-	float hp;				//体力
-	float fuel;				//燃料
-	int barrier_count;		//バリアの枚数
-	Barrier* barrier;		//バリア
-
-	int images[20];			//画像データ
-	int situation;			//プレイヤーの状態
-	bool hit;				//ヒットしたかの判定
-	bool red;				//赤く点滅するかの判定
-
-	float run_span;			//走る画像の切替間隔
-	float hit_span;			//ヒット画像の切替間隔
-	float jump_span;		//ジャンプ有効時間
-	float sliding_span;		//スライディング有効時間
-
-	float invincibletime;	//無敵時間
 
 public:
 	Player();
@@ -39,30 +19,8 @@ public:
 	void Finalize();      //終了時処理
 
 public:
-	void SetActive(bool flg);      //有効フラグ設定
-	void DecreaseHp(float value);  //体力減少処理
-	void GetKey();		   //鍵取得
 	Vector2D GetLocation() const;  //位置座標取得
 	Vector2D GetBoxSize()const;    //当たり判定の大きさ取得
-	float GetSpeed()const;         //速さ取得処理
-	float GetFuel()const;          //燃料取得
-	float GetHp()const;            //体力取得
-	int GetBarriarCount()const;    //バリアの枚数取得
-	bool IsBarrier()const;         //バリア有効か?を取得
-
-	bool IsJump()const;				//ジャンプの真偽を取得
-	bool IsSliding()const;			//スライディングの真偽を取得
-	bool IsCarMode();				//車モードの真偽を取得
-	bool IsInvincible();			//無敵状態の真偽を取得
-
-private:
-	void Movement();       //移動処理
-	void Acceleration();   //加速処理
-	
-	void Jump();			//ジャンプ処理
-	void Sliding();			//スライディング処理
-	void RunAnimation();	//走るアニメーション
-	void HitAnimation();	//ヒットアニメーション
-	void JumpAnimation();	//ジャンプアニメーション
+	void Movement();
 };
 

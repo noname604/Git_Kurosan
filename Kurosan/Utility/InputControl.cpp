@@ -60,7 +60,6 @@ void InputControl::Update()
 	{
 		stick[1].y = ((float)input_state.ThumbRY / (float)SHRT_MIN);
 	}
-
 }
 
 //ƒ{ƒ^ƒ“Žæ“¾:‰Ÿ‚µ‚Ä‚éŠÔ

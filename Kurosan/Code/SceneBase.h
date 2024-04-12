@@ -5,9 +5,6 @@ enum eSceneType
 {
 	E_TITLE,
 	E_MAIN,
-	E_RULE,
-	E_RANKING_DISP,
-	E_RANKING_INPUT,
 	E_RESULT,
 	E_END
 };
@@ -34,4 +31,3 @@ public:
 	//Œ»İ‚ÌƒV[ƒ“î•ñ‚ğæ“¾
 	virtual eSceneType GetNowScene() const = 0;
 };
-

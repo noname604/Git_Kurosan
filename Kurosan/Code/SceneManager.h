@@ -27,5 +27,3 @@ private:
 	void ChangeScene(eSceneType scene_type);        //シーン切り替え処理
 	SceneBase* CreateScene(eSceneType scene_type);  //シーン生成処理
 };
-
-
