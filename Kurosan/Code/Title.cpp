@@ -4,7 +4,7 @@
 
 Title::Title()
 {
-
+	image = LoadGraph("image/tamesi50.png");
 }
 
 Title::~Title()
@@ -27,12 +27,13 @@ eSceneType Title::Update()
 //•`‰æˆ—
 void Title::Draw()const
 {
+	DrawGraph(100, 100, image, TRUE);
 }
 
 //I—¹ˆ—
 void Title::Finalize()
 {
-
+	DeleteGraph(image);
 }
 
 //Œ»İ‚ÌƒV[ƒ“î•ñ‚ğæ“¾
